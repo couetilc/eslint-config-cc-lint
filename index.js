@@ -1,4 +1,3 @@
-// TODO add a build step and output to dist/ folder, which will be for releases
 // TODO create file react.js for react specific rules which extends this config
 // TODO check the custom rules from eslint-plugin-airbnb, maybe they have some good ideas e.g. no-restricted-properties choices
 
@@ -65,7 +64,7 @@ module.exports = {
     "array-callback-return": ["error", { "allowImplicit": false, "checkForEach": true }],
     "block-scoped-var": ["error"],
     "class-methods-use-this": ["error"],
-    "curly": ["error", "multi-or-nest", "consistent"],
+    "curly": ["error", "multi-line", "consistent"],
     "default-case": ["error"],
     "default-case-last": ["error"],
     "dot-location": ["error", "property"],
@@ -124,7 +123,6 @@ module.exports = {
     "require-unicode-regexp": ["error"],
     "vars-on-top": ["error"],
     "wrap-iife": ["error"],
-    // TODO next rule sections to go through on https://eslint.org/docs/rules/
     // - Variables
     "no-delete-var": ["error"],
     "no-shadow-restricted-names": ["error"],
