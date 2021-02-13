@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-cc-lint",
+  "version": "1.0.0",
+  "description": "useful javascript linting rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint -c index.js ./**/*.js"
+  },
+  "keywords": [
+    "eslint",
+    "javascript",
+    "cc-lint",
+    "linting"
+  ],
+  "author": {
+    "name": "Connor Couetil",
+    "email": "connor@couetil.com",
+    "url": "couetil.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.20.0"
+  }
+}
