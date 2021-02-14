@@ -14,7 +14,7 @@ npm i -d eslint-config-cc-lint
 2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc-lint`.
 
 ```js
-// an exported eslint configuration
+// file: .eslintrc.js
 module.exports = {
   extends: "eslint-config-cc-lint"
 }
