@@ -4,7 +4,10 @@
   "description": "useful javascript linting rules",
   "main": "index.js",
   "scripts": {
-    "test": "eslint -c index.js ./**/*.js && node test.js"
+    "test": "eslint ./**/*.js && node test.js"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
   },
   "keywords": [
     "eslint",
