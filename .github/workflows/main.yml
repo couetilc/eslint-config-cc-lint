@@ -13,16 +13,22 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
 
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
       - name: set node version
-        shell: bash -l {0}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: log environment information
         run: |
-          echo "PRE: $(node -v)"
-          nvm install
-          echo "POST: $(node -v)"
+          node -v
+          npm -v
 
       - name: install dependencies
         run: |
-          echo "OTHER: $(node -v)"
           npm ci
 
       - name: test package
