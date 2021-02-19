@@ -1,10 +1,3 @@
-// TODO create file react.js for react specific rules which extends this config
-// TODO check the custom rules from eslint-plugin-airbnb, maybe they have some good ideas e.g. no-restricted-properties choices
-
-// go through:
-//    eslint-plugin-node
-//    eslint-plugin-import
-
 module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
@@ -14,6 +7,10 @@ module.exports = {
     node: true,
     browser: true,
   },
+  plugins: [
+    'import',
+    'node'
+  ],
   rules: {
     /* I like these rules */
     // possible errors
@@ -155,5 +152,11 @@ module.exports = {
     "no-div-regex": ["error"], // not sure what this is checking for
     "no-invalid-this": ["error"], // seems useful
     "no-lone-blocks": ["error"],
+
+    "node/no-unpublished-bin": ["error"],
+    "node/no-unpublished-import": ["error"],
+    "node/no-unpublished-require": ["error"],
+    "node/process-exit-as-throw": ["error"],
+    "node/shebang": ["error"],
   },
 };
