@@ -1,6 +1,8 @@
 const assert = require('assert');
 const eslint = require('eslint');
 
+const modules = ['./index.js', './react.js'];
+
 // eslint-disable-next-line no-console
 const log = (...arg) => console.log(...arg);
 
@@ -21,26 +23,33 @@ async function test(name, fn) {
 }
 
 test('exports an object', () => {
-  const config = require('./index.js');
-  assert.strictEqual(typeof config, 'object');
-  assert.notEqual(config, null);
+  modules.forEach(mod => {
+    const config = require(mod);
+    assert.strictEqual(typeof config, 'object');
+    assert.notEqual(config, null);
+  });
 });
 
 test('exports a valid eslint configuration', async () => {
-  const baseConfig = require('./index.js');
-  const linter = new eslint.ESLint({ useEslintrc: false, baseConfig });
-  const [result] = await linter.lintText(`
-    const x = 1;
-    function foo() {
-      // test
+  await Promise.all(modules.map(async mod => {
+    const config = require(mod);
+    const linter = new eslint.ESLint({
+      useEslintrc: false,
+      baseConfig: config,
+    });
+    const [result] = await linter.lintText(`
+      const x = 1;
+      function foo() {
+        // test
+      }
+      foo(x)
+    `);
+    if (result.messages.length > 0) {
+      log(result.messages);
     }
-    foo(x)
-  `);
-  if (result.messages.length > 0) {
-    log(result.messages);
-  }
-  assert.strictEqual(result.errorCount, 0);
-  assert.strictEqual(result.warningCount, 0);
+    assert.strictEqual(result.errorCount, 0);
+    assert.strictEqual(result.warningCount, 0);
+  }));
 });
 
 if (failed) {

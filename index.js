@@ -8,7 +8,6 @@ module.exports = {
     browser: true,
   },
   plugins: [
-    'import',
     'node'
   ],
   rules: {
