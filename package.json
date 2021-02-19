@@ -21,6 +21,10 @@
     "url": "couetil.com"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/couetilc/eslint-config-cc-lint"
+  },
   "dependencies": {
     "eslint": "^7.20.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",

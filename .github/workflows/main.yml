@@ -6,12 +6,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
+
+      - name: set node version
+        shell: bash -l {0}
+        run: |
+          echo "PRE: $(node -v)"
+          nvm install
+          echo "POST: $(node -v)"
 
       - name: install dependencies
         run: |
@@ -24,3 +31,5 @@ jobs:
       - name: publish package
         run: |
           npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
