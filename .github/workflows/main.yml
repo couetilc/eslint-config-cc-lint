@@ -22,6 +22,7 @@ jobs:
 
       - name: install dependencies
         run: |
+          echo "OTHER: $(node -v)"
           npm ci
 
       - name: test package
