@@ -21,11 +21,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
-      - name: log environment information
-        run: |
-          node -v
-          npm -v
+          registry-url: 'https://registry.npmjs.org'
 
       - name: install dependencies
         run: |
@@ -39,4 +35,4 @@ jobs:
         run: |
           npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
