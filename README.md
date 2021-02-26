@@ -8,7 +8,7 @@ as a shareable [ESLint](https://eslint.org/) configuration.
 1) Install this package using `npm`.
 
 ```sh
-npm i -d eslint-config-cc-lint eslint eslint-plugin-node
+npm install --save-dev eslint-config-cc-lint eslint eslint-plugin-node
 ```
 
 2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc-lint`.
