@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cc",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "useful javascript linting rules",
   "main": "index.js",
   "scripts": {
