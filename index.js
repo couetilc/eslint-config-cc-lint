@@ -142,6 +142,13 @@ module.exports = {
     "prefer-const": ["error"],
     "require-yield": ["error"],
 
+    // eslint-plugin-node
+    "node/no-unpublished-bin": ["error"],
+    "node/no-unpublished-import": ["error"],
+    "node/no-unpublished-require": ["error"],
+    "node/process-exit-as-throw": ["error"],
+    "node/shebang": ["error"],
+
     /* not so sure about these rules */
     // possible errors
     "no-await-in-loop": ["error"],
@@ -150,11 +157,5 @@ module.exports = {
     "default-param-last": ["error"],
     "no-div-regex": ["error"], // not sure what this is checking for
     "no-lone-blocks": ["error"],
-
-    "node/no-unpublished-bin": ["error"],
-    "node/no-unpublished-import": ["error"],
-    "node/no-unpublished-require": ["error"],
-    "node/process-exit-as-throw": ["error"],
-    "node/shebang": ["error"],
   },
 };
