@@ -1,4 +1,4 @@
-# eslint-config-cc-lint
+# eslint-config-cc
 
 A collection of useful linting rules emphasizing correctness rather than style,
 as a shareable [ESLint](https://eslint.org/) configuration.
