@@ -1,16 +1,14 @@
 # eslint-config-cc-lint
 
 A collection of useful linting rules emphasizing correctness rather than style,
-as a shareable eslint configuration.
+as a shareable [ESLint](https://eslint.org/) configuration.
 
-## Usage
-
-### Default configuration
+## Usage / Installation
 
 1) Install this package using `npm`.
 
 ```sh
-npm i -d eslint-config-cc-lint eslint eslint-plugin-node
+npm i -d eslint-config-cc eslint eslint-plugin-node
 ```
 
 2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc-lint`.
@@ -18,24 +16,7 @@ npm i -d eslint-config-cc-lint eslint eslint-plugin-node
 ```js
 // file: .eslintrc.js
 module.exports = {
-  extends: ["cc-lint"]
-}
-```
-
-### React configuration
-
-1) Install this package using `npm`.
-
-```sh
-npm i -d eslint-config-cc-lint eslint eslint-plugin-node eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
-```
-
-2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc-lint/react`.
-
-```js
-// file: .eslintrc.js
-module.exports = {
-  extends: ["cc-lint/react"]
+  extends: ["cc"]
 }
 ```
 
@@ -46,7 +27,7 @@ Steps to publish a new version of this package to NPM:
 ```sh
 # 1. Increment the version number in `package.json`
 git add package.json && git commit -m "bump version to X.X.X"
-# 2. Push your updates to `master` branch at https://github.com/couetilc/eslint-config-cc-lint
+# 2. Push your updates to `master` branch at https://github.com/couetilc/eslint-config-cc
 git push origin master
 # 3. Create and publish a new release from the `master` branch
 hub release create -t origin/master -m "vX.X.X" "vX.X.X"
