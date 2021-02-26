@@ -11,7 +11,7 @@ as a shareable [ESLint](https://eslint.org/) configuration.
 npm i -d eslint-config-cc eslint eslint-plugin-node
 ```
 
-2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc-lint`.
+2) Open or create an eslint configuration and add the property `extends: "eslint-config-cc`.
 
 ```js
 // file: .eslintrc.js
@@ -34,4 +34,4 @@ hub release create -t origin/master -m "vX.X.X" "vX.X.X"
 ```
 
 Increment the package version number according to [Semantic Versioning](https://semver.org/).
-A Github Action will publish the new version to [NPM](https://www.npmjs.com/package/eslint-config-cc-lint).
+A Github Action will publish the new version to [NPM](https://www.npmjs.com/package/eslint-config-cc).
