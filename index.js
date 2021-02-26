@@ -149,7 +149,6 @@ module.exports = {
     "consistent-return": ["error"],
     "default-param-last": ["error"],
     "no-div-regex": ["error"], // not sure what this is checking for
-    "no-invalid-this": ["error"], // seems useful
     "no-lone-blocks": ["error"],
 
     "node/no-unpublished-bin": ["error"],
