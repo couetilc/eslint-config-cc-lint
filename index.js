@@ -111,7 +111,6 @@ module.exports = {
     "no-useless-return": ["error"],
     "no-void": ["error"],
     "no-with": ["error"],
-    "prefer-named-capture-group": ["warn"],
     "prefer-promise-reject-errors": ["error"],
     "prefer-regex-literals": ["error", { "disallowRedundantWrapping": true }],
     "radix": ["error"],
