@@ -99,7 +99,7 @@ module.exports = {
     "no-script-url": ["error"],
     "no-self-assign": ["error"],
     "no-self-compare": ["error"],
-    "no-sequences": ["error"],
+    "no-sequences": ["error", { "allowInParentheses": false }],
     "no-throw-literal": ["error"],
     "no-unmodified-loop-condition": ["error"],
     "no-unused-expressions": ["error"],
